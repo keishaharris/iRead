@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>
-      My Book Collection
+      iRead - My Book Collection
     </title>
       
    </head>
@@ -11,53 +11,73 @@
   <body>
     <div class="container">
       <div class="header-ctn">
-      <img      src="https://i.pinimg.com/564x/18/18/88/18188820e5da19a3908aeb18af5246b5.jpg" alt="Book logo" id="logo">
-    <h1>Book Collection</h1>
+    <header> 
+        <div class="header-title">
+            <h1>iRead - Book Collection</h1>
+        </div>
+        <div class="header-btn" id="newAdd">
+            <span class="header-btn-btn">
+                +
+            </span>
+            <span class="addText">
+                Add a book to your collection
+            </span>
+        </div>
+    
+    </header>
       </div>
-      <div class="form-ctn">
-    <form method="POST">
-      <h2>New Book Entry</h2>
-      
-      <fieldset>
-      <label for="title">
-        Book Title: 
-      </label>
-      <input type="text" id="title" required value="Name of the book?" />
-      </fieldset>
-      
-      <fieldset>
-      <label for="author">
-        Author: 
-      </label>
-      <input type="text" required id="author" />
-      </fieldset>
-      
-       <fieldset>
-      <label for="pages">
-        Pages: 
-      </label>
-      <input type="text" required id="pages"/>
-      </fieldset>
-         
-         <fieldset>
-      <label for="read_status">Have you read this book? </label>
-        <select id="read_status" name="read_status">
-          <option>Yes, I already finished this.</option>
-          <option>Nope, still working on it!</option>
-      </select>
-           </fieldset>
-      
-      <button onclick="addBookToCollection(e)" type="submit">Submit</button>
-    </form>
+      <div class="form-ctn" id="popup">
+
+        <form class="form" id="form" action="/index.js">
+            <span class="close" id="close">&times;</span>
+            <h2>New Book Entry</h2>
+            
+            <fieldset>
+                <label for="title">
+                    Title: 
+                </label>
+                <input type="text" id="title" name="title required value="Name of the book?" />
+            </fieldset>
+            
+            <fieldset>
+                <label for="author">
+                    Author: 
+                </label>
+                <input type="text" required id="author" name="author"/>
+            </fieldset>
+            
+            <fieldset>
+                <label for="pages">
+                    Pages: 
+                </label>
+                <input type="text" required id="pages" name="pages"/>
+            </fieldset>
+                
+                <fieldset>
+                    <label for="read_status">Finished this book? </label>
+                    <input type="checkbox" id="read_status" name="read_status"/>
+                </fieldset>
+            
+            <button type="submit" class="submit" id="submit">Submit</button>
+        </form>
       </div>
+
+      <section class="instr-ctn">
+          <span>
+          Hello There 👋🏾! Welcome to iRead, where you can track your reading progress. 
+          To add a new book to your collection 📚 
+          simply click the add button and fill our the entry. Your full collection
+          is displayed below. Enjoy!   
+        </span>
+        </section>
       
-      <div class="tble-ctn">
-        <table>
-          <tbody id="tbody">
-          </tbody>
-        </table>
+
+
+      <div class="lib-ctn">
+       
       </div>
-    </div>
+
+
     <script src="index.js"></script>
   </body>
 </html>

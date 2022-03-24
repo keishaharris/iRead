@@ -1,45 +1,39 @@
-let myCollection = [
-    {
-      title: "Harry Potter and the Sorcerer's Stone",
-      author: "J.K. Rowilings",
-      pages: 223,
-      read_status: "Yes, I already finished this."
-    },
-    
-    {
-      title: "Harry Potter and the Chamber of Secrets",
-      author: "J.K. Rowilings",
-      pages: 341,
-      read_status: "Yes, I already finished this."
-    },
-    {
-      title: "Harry Potter and the Prisoner of Azkaban",
-      author: "J.K. Rowilings",
-      pages: 341,
-      read_status: "Yes, I already finished this."
-    }
-  ];
+let myCollection = [];
+let newEntry;
+
+const popupForm = document.getElementById("popup");
+const newAdd = document.getElementById("newAdd");
+const closeBtn = document.getElementById("close");
+const submitBtn = document.getElementById("submit");
+const form = document.getElementById("form").action = ;
+
+newAdd.addEventListener('click', e => {
+    popupForm.style.display= "block";
+})
+
+closeBtn.addEventListener('click', e => {
+    popupForm.style.display = "none";
+}
+)
+
+submitBtn.addEventListener('click', addBookToCollection)
+
   
-  const table = document.getElementById("tbl-list");
+function Book(title, author, pages, readStatus) {
+    this.title = form.title.value;
+    this.author = form.author.value;
+    this.pages = form.pages.value;
+    this.readStatus = form.read_status.checked;
+}
   
-  function Book(title, author, pages, read_status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read_status = read_status;
-    this.info = function(){
-      return(`this.title by this.author, this.pages pages, this.read_status`)}
-  }
-  
-  function addBookToCollection(e) {
+function addBookToCollection() {
+   
     e.preventDefault();
-      let inputTitle = document.getElementById("title").value; 
-    alert(`${inputTitle}`)
-      // let inputAuthor = document.getElementById("author").value;
-      // let inputPages = Number(document.getElementById("pages").value);
-      // let inputReadStatus = document.getElementById("read_status").value;
-    
-    // let newEntry = new Book(inputTitle, inputAuthor, inputPages, inputReadStatus);
+    console.log('working')
+    // popupForm.style.display = "none";
+
+    // let newEntry = new Book(title, author, pages, readStatus);
+    // console.log(newEntry);
     // console.log(newEntry)
     // myCollection.push(newEntry);
     
@@ -58,10 +52,13 @@ let myCollection = [
        <button>Delete from Library</button>
        </tr>`
     }
-      tbody.innerHTML = html;
+
   }
   
   window.addEventListener('load', (e) => {
+      if(e.target == popupForm){
+          popupForm.style.display ="none";
+      }
     displayCollection();
   })
   
@@ -74,3 +71,23 @@ let myCollection = [
   // book history 
   // rating?
   // recommendation of other books?
+
+//   {
+//     title: "Harry Potter and the Sorcerer's Stone",
+//     author: "J.K. Rowilings",
+//     pages: 223,
+//     read_status: "Yes, I already finished this."
+//   },
+  
+//   {
+//     title: "Harry Potter and the Chamber of Secrets",
+//     author: "J.K. Rowilings",
+//     pages: 341,
+//     read_status: "Yes, I already finished this."
+//   },
+//   {
+//     title: "Harry Potter and the Prisoner of Azkaban",
+//     author: "J.K. Rowilings",
+//     pages: 341,
+//     read_status: "Yes, I already finished this."
+//   }
