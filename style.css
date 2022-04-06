@@ -19,7 +19,7 @@ body{
       color: #f3f3f3;
       padding: 5px 5px 5px 10px;
       font-family:'Courier New', Courier, monospace;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: lighter;
       word-spacing: 0.25px;
       letter-spacing: 0.25px;
@@ -74,6 +74,14 @@ body{
   
   /* --------- FORM CONENT ------------- */
 
+  h2{
+    background: #5CC3DC;
+    /* color: #f3f3f3; */
+    border: 1px solid #4D4D4D;
+    width: 100%;
+    font-weight: lighter;
+  }
+
   .form-ctn{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -88,10 +96,10 @@ body{
   }
 
 
-  .form{
+  form{
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 30px;
+    padding: 50px;
     border: 5px solid #888;
     border-radius: 3%;
     width: 30%; /* Could be more or less, depending on screen size */
@@ -117,13 +125,18 @@ body{
     border: none;
     margin: 3px;
   }
-  
+  input{
+      width:99%;
+      margin-bottom: 10px;
+      padding: 5px;
+  }
+
   .submit{
-      background-color: white;
-      border: 3px solid #4D4D4D;
+      background-color: #6B9549;
+      border: 1px solid #4D4D4D;
       padding: 5px;
       margin: auto;
-      width: 30%; 
+      width: 100%; 
   }
   .submit:hover{
       cursor: pointer;

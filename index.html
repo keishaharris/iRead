@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" conent="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>
       iRead - My Book Collection
@@ -15,7 +17,7 @@
         <div class="header-title">
             <h1>iRead - Book Collection</h1>
         </div>
-        <div class="header-btn" id="newAdd">
+        <div class="header-btn" id="openEntry">
             <span class="header-btn-btn">
                 +
             </span>
@@ -28,37 +30,16 @@
       </div>
       <div class="form-ctn" id="popup">
 
-        <form class="form" id="form" action="/index.js">
+        <form id="popForm" >
             <span class="close" id="close">&times;</span>
             <h2>New Book Entry</h2>
             
-            <fieldset>
-                <label for="title">
-                    Title: 
-                </label>
-                <input type="text" id="title" name="title required value="Name of the book?" />
-            </fieldset>
-            
-            <fieldset>
-                <label for="author">
-                    Author: 
-                </label>
-                <input type="text" required id="author" name="author"/>
-            </fieldset>
-            
-            <fieldset>
-                <label for="pages">
-                    Pages: 
-                </label>
-                <input type="text" required id="pages" name="pages"/>
-            </fieldset>
-                
-                <fieldset>
-                    <label for="read_status">Finished this book? </label>
-                    <input type="checkbox" id="read_status" name="read_status"/>
-                </fieldset>
-            
-            <button type="submit" class="submit" id="submit">Submit</button>
+            <input type="text" required id="title" name="title" placeholder="Title" />
+                <input type="text" required id="author" name="author" placeholder="Author"/>
+                <input type="text" required id="pages" name="pages" placeholder="Pages"/>
+                <label for="read_status">Finished this book? </label>
+                <input type="checkbox" id="read_status" name="read_status"/>
+                <button type="submit" form="popForm" class="submit">Submit</button>
         </form>
       </div>
 
@@ -66,7 +47,7 @@
           <span>
           Hello There 👋🏾! Welcome to iRead, where you can track your reading progress. 
           To add a new book to your collection 📚 
-          simply click the add button and fill our the entry. Your full collection
+          simply click the add button and fill out the entry. Your full collection
           is displayed below. Enjoy!   
         </span>
         </section>
@@ -78,6 +59,6 @@
       </div>
 
 
-    <script src="index.js"></script>
+    <script src="MyScript.js"></script>
   </body>
 </html>
